@@ -25,7 +25,7 @@ export default function Banner() {
 
           <a
             href="/submit"
-            className="ml-6 rounded bg-white px-7 py-1.5 text-[16px] font-mono font-medium text-sky-600 hover:bg-zinc-50"
+            className="ml-6 bg-white px-7 py-1.5 text-[16px] font-mono font-medium text-sky-600 hover:bg-zinc-50"
           >
             Go
           </a>
