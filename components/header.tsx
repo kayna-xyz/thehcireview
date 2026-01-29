@@ -77,10 +77,10 @@ function HeaderContent() {
 
           {/* Category tags */}
           <div className="mt-4 flex flex-col gap-1 text-right text-[16px] leading-tight text-zinc-600">
-            <span>Technology</span>
-            <span>Business</span>
-            <span>Policy</span>
-            <span>Innovators</span>
+            <span>Artificial Intelligence</span>
+            <span>Human-Computer Interaction</span>
+            <span>Robotics & Wearables</span>
+            <span>Emerging Tech Markets</span>
           </div>
         </div>
       </div>

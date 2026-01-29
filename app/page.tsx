@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { X, Newspaper, FileText, Mic } from "lucide-react"
+import { X } from "lucide-react"
 import Link from "next/link"
 import Header from "@/components/header"
 import Banner from "@/components/banner"
@@ -49,7 +49,7 @@ export default function Home() {
                   The HCI Review
                 </h1>
                 <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-                  A biannual independent review journal focused on technological development and global governance.
+                  The first student-led publication on human–computer interaction in the US.
                 </p>
                 <p className="font-mono text-lg text-foreground font-medium mb-8">
                   For those building what comes next.
@@ -80,88 +80,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Research Focus 2026 */}
-        <section className="py-24 px-6 md:px-12 lg:px-24">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="font-mono text-sm uppercase tracking-[0.2em] text-muted-foreground mb-6">
-              2026 Research Focus
-            </h2>
-            <h3 className="font-mono text-3xl md:text-4xl font-semibold text-foreground mb-8 text-balance">
-              AI, Energy, and the New GeoTechnological Competition
-            </h3>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Beyond building AI, what comes next? This year, we examine the shift in 2026, AI as infrastructure, energy as constraint, frontline voices from founders, and industry observations that define the next chapter of technological development.
-            </p>
-          </div>
-        </section>
-
-        {/* Content Offerings */}
-        <section className="py-24 px-6 md:px-12 lg:px-24 bg-background">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="font-mono text-sm uppercase tracking-[0.2em] text-muted-foreground mb-4 text-center">
-              What We Publish
-            </h2>
-            <p className="text-center text-muted-foreground mb-16 max-w-2xl mx-auto text-lg font-mono">
-              Research and analysis for readers who value judgment over speed
-            </p>
-            
-            <div className="grid md:grid-cols-3 gap-6">
-              {/* Weekly */}
-              <div className="group bg-background border border-brand-button p-8 hover:bg-brand-button/5 transition-all duration-300">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-10 h-10 rounded-full bg-brand-button flex items-center justify-center flex-shrink-0">
-                    <Newspaper className="w-5 h-5 text-background" />
-                  </div>
-                  <span className="font-mono text-xs uppercase tracking-[0.15em] text-brand-button font-medium">
-                    Weekly
-                  </span>
-                </div>
-                <h3 className="font-mono text-xl font-semibold text-foreground mb-4 leading-tight">
-                  Five Stories Shaping the Future
-                </h3>
-                <p className="text-muted-foreground leading-relaxed text-sm">
-                  A weekly brief covering the five developments that truly matter—focusing on structural shifts across technology and markets, including major research breakthroughs, policy signals, and what they mean for investors and builders.
-                </p>
-              </div>
-
-              {/* Biweekly */}
-              <div className="group bg-background border border-brand-button p-8 hover:bg-brand-button/5 transition-all duration-300">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-10 h-10 rounded-full bg-brand-button flex items-center justify-center flex-shrink-0">
-                    <FileText className="w-5 h-5 text-background" />
-                  </div>
-                  <span className="font-mono text-xs uppercase tracking-[0.15em] text-brand-button font-medium">
-                    Biweekly
-                  </span>
-                </div>
-                <h3 className="font-mono text-xl font-semibold text-foreground mb-4 leading-tight">
-                  Deep Tech & Policy Analysis
-                </h3>
-                <p className="text-muted-foreground leading-relaxed text-sm">
-                  In-depth research and commentary aligned with each semester&apos;s core themes. This term, we focus on AI, energy, and geopolitics, producing analysis that meets the standards of leading think tanks and policy institutions.
-                </p>
-              </div>
-
-              {/* Monthly */}
-              <div className="group bg-background border border-brand-button p-8 hover:bg-brand-button/5 transition-all duration-300">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-10 h-10 rounded-full bg-brand-button flex items-center justify-center flex-shrink-0">
-                    <Mic className="w-5 h-5 text-background" />
-                  </div>
-                  <span className="font-mono text-xs uppercase tracking-[0.15em] text-brand-button font-medium">
-                    Monthly
-                  </span>
-                </div>
-                <h3 className="font-mono text-xl font-semibold text-foreground mb-4 leading-tight">
-                  Columbia Founders Interviews
-                </h3>
-                <p className="text-muted-foreground leading-relaxed text-sm">
-                  Conversations with Columbia alumni and affiliates on building the next generation of technology companies or shaping policy decisions—featuring early-stage builders, experienced operators, and public company founders.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
       </main>
 
       <Footer />
