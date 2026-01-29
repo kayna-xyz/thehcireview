@@ -11,8 +11,8 @@ const ibmPlexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Columbia Tech & Policy Review',
-  description: 'A student-run publication at Columbia University exploring the intersection of technology and policy.',
+  title: 'The HCI Review',
+  description: 'A student-run publication at Columbia University exploring the intersection of human-computer interaction and technology.',
   generator: 'v0.app',
   icons: {
     icon: [

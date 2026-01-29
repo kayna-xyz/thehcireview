@@ -45,8 +45,34 @@ function HeaderContent() {
       <div className="flex items-start justify-between py-6">
         <div>
           <Link href="/">
-            <h1 className="font-mono text-4xl font-semibold leading-tight tracking-tight">
-              Columbia <br /> Tech & Policy <br /> Review
+            <h1 className="font-mono text-5xl md:text-6xl font-semibold leading-tight tracking-tight">
+              <span className="inline-block">
+                {"The HCI".split("").map((char, index) => (
+                  <span
+                    key={index}
+                    className="inline-block animate-[letterDance_2.5s_ease-in-out_infinite]"
+                    style={{ 
+                      animationDelay: `${index * 0.05}s`,
+                    }}
+                  >
+                    {char === " " ? "\u00A0" : char}
+                  </span>
+                ))}
+              </span>
+              <br />
+              <span className="inline-block">
+                {"Review".split("").map((char, index) => (
+                  <span
+                    key={index}
+                    className="inline-block animate-[letterDance_2.5s_ease-in-out_infinite]"
+                    style={{ 
+                      animationDelay: `${(index + 8) * 0.05}s`,
+                    }}
+                  >
+                    {char}
+                  </span>
+                ))}
+              </span>
             </h1>
           </Link>
         </div>
@@ -77,10 +103,10 @@ function HeaderContent() {
 
           {/* Category tags */}
           <div className="mt-4 flex flex-col gap-1 text-right text-[16px] leading-tight text-zinc-600">
-            <span>Technology</span>
-            <span>Business</span>
-            <span>Policy</span>
-            <span>Innovators</span>
+            <span>Artificial Intelligence</span>
+            <span>Human-Computer Interaction</span>
+            <span>Robotics & Wearables</span>
+            <span>Emerging Tech Markets</span>
           </div>
         </div>
       </div>

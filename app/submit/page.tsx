@@ -55,7 +55,7 @@ export default function SubmitPage() {
   }
 
   const handleSubmit = () => {
-    const subject = encodeURIComponent("CTPR Submission - " + formData.name)
+    const subject = encodeURIComponent("HCI Review Submission - " + formData.name)
     const body = encodeURIComponent(
       `Name: ${formData.name}\nAffiliation: ${formData.affiliation}\nGraduate Year: ${formData.graduateYear}\nEmail: ${formData.email}\n\nArticle Description:\n${formData.articleDescription}`
     )
@@ -63,11 +63,11 @@ export default function SubmitPage() {
   }
 
   const topics = [
-    "Artificial intelligence as infrastructure",
-    "Energy, compute, and technological constraints",
-    "U.S.–China competition and geo-technological rivalry",
-    "Industry analysis across companies, business models, or products",
-    "First-hand perspectives from builders, researchers, and operators"
+    "Artificial Intelligence",
+    "Robotics & Wearables",
+    "Material Science",
+    "Digital Media & Communication Media Developments",
+    "Emerging Tech Markets"
   ]
 
   return (
@@ -82,7 +82,7 @@ export default function SubmitPage() {
               Submit a Pitch
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl">
-              Columbia Tech & Policy Review (CTPR) accepts pitches and submissions on a rolling basis. We welcome contributions from students, faculty, researchers, founders, and community stakeholders working at the intersection of technology, policy, and global competition.
+              The HCI Review accepts pitches and submissions on a rolling basis. We welcome contributions from students, faculty, researchers, founders, and community stakeholders working at the intersection of human-computer interaction, emerging technology, and product innovation.
             </p>
           </div>
 
