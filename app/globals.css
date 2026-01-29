@@ -161,11 +161,21 @@
   }
 }
 
-@keyframes colorWave {
+@keyframes letterDance {
   0%, 100% {
     color: inherit;
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    color: #7BD5FF;
+    transform: translateY(-4px) rotate(-2deg);
   }
   50% {
     color: #7BD5FF;
+    transform: translateY(0) rotate(0deg);
+  }
+  75% {
+    color: #7BD5FF;
+    transform: translateY(-2px) rotate(2deg);
   }
 }

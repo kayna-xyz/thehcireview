@@ -22,22 +22,18 @@ export default function Home() {
         <section className="py-24 px-6 md:px-12 lg:px-24 overflow-hidden">
           <div className="max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
-              {/* Magazine Cover with border blur effect */}
+              {/* Magazine Cover with transparent blur effect */}
               <div className="relative flex justify-center lg:justify-start">
-                {/* Blur backdrop container */}
                 <div className="relative group cursor-pointer">
-                  {/* Blurred border effect */}
-                  <div className="absolute -inset-[2px] bg-gradient-to-r from-brand-button via-brand-button/60 to-brand-button rounded-lg blur-md opacity-70 animate-[glow_3s_ease-in-out_infinite]" />
-                  
-                  {/* Inner blur layer for softer edge */}
-                  <div className="absolute -inset-[1px] bg-brand-button/30 rounded-lg blur-sm" />
+                  {/* Soft glow behind magazine - transparent, no borders */}
+                  <div className="absolute -inset-8 bg-brand-button/20 rounded-3xl blur-3xl opacity-50 animate-[glow_3s_ease-in-out_infinite]" />
                   
                   {/* Main magazine container */}
-                  <div className="relative z-10 bg-background rounded-lg p-1 transition-all duration-500 group-hover:scale-[1.02]">
+                  <div className="relative z-10 transition-all duration-500 group-hover:scale-[1.02]">
                     <img 
                       src="/images/magazine-cover.png"
                       alt="The HCI Review - Fall 2026 Inaugural Issue"
-                      className="w-full max-w-[340px] rounded-sm"
+                      className="w-full max-w-[340px] drop-shadow-2xl"
                     />
                   </div>
                 </div>
