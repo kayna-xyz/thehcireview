@@ -46,33 +46,7 @@ function HeaderContent() {
         <div>
           <Link href="/">
             <h1 className="font-mono text-5xl md:text-6xl font-semibold leading-tight tracking-tight">
-              <span className="inline-block overflow-hidden">
-                {"The HCI".split("").map((char, index) => (
-                  <span
-                    key={index}
-                    className="inline-block animate-[slideUpCycle_1s_ease-in-out_infinite]"
-                    style={{ 
-                      animationDelay: `${index * 0.08}s`,
-                    }}
-                  >
-                    {char === " " ? "\u00A0" : char}
-                  </span>
-                ))}
-              </span>
-              <br />
-              <span className="inline-block overflow-hidden">
-                {"Review".split("").map((char, index) => (
-                  <span
-                    key={index}
-                    className="inline-block animate-[slideUpCycle_1s_ease-in-out_infinite]"
-                    style={{ 
-                      animationDelay: `${(index + 8) * 0.08}s`,
-                    }}
-                  >
-                    {char}
-                  </span>
-                ))}
-              </span>
+              The HCI <br /> Review
             </h1>
           </Link>
         </div>

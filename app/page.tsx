@@ -22,19 +22,22 @@ export default function Home() {
         <section className="py-24 px-6 md:px-12 lg:px-24 overflow-hidden">
           <div className="max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
-              {/* Magazine Cover with blur backdrop effect */}
-              <div className="relative flex justify-center lg:justify-start">
+              {/* Magazine Cover with cool floating effect */}
+              <div className="relative flex justify-center lg:justify-start perspective-[1000px]">
                 {/* Blur backdrop container */}
-                <div className="relative group">
-                  {/* Blurred background layer */}
-                  <div className="absolute -inset-8 bg-white/40 backdrop-blur-[20px] rounded-lg" />
+                <div className="relative group cursor-pointer">
+                  {/* Animated glow background */}
+                  <div className="absolute -inset-4 bg-gradient-to-r from-brand-button/20 via-brand-button/30 to-brand-button/20 rounded-lg blur-xl opacity-60 animate-[glow_3s_ease-in-out_infinite]" />
                   
-                  {/* Main magazine */}
-                  <div className="relative z-10 p-4 transition-transform duration-700 ease-out group-hover:scale-[1.02] group-hover:-translate-y-1">
+                  {/* Shimmer overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent bg-[length:200%_100%] animate-[shimmer_3s_linear_infinite] rounded-lg z-20 pointer-events-none" />
+                  
+                  {/* Main magazine with floating animation */}
+                  <div className="relative z-10 p-4 animate-[float_6s_ease-in-out_infinite] transition-all duration-500 group-hover:scale-105">
                     <img 
                       src="/images/magazine-cover.png"
                       alt="The HCI Review - Fall 2026 Inaugural Issue"
-                      className="w-full max-w-[340px] drop-shadow-[0_20px_40px_rgba(128,128,128,0.5)]"
+                      className="w-full max-w-[340px] rounded-sm shadow-2xl"
                     />
                   </div>
                 </div>
