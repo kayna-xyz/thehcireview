@@ -46,7 +46,7 @@ function HeaderContent() {
         <div>
           <Link href="/">
             <h1 className="font-mono text-4xl font-semibold leading-tight tracking-tight">
-              Columbia <br /> Tech & Policy <br /> Review
+              The HCI <br /> Review
             </h1>
           </Link>
         </div>

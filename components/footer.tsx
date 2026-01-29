@@ -121,7 +121,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-border py-6 text-[16px] text-muted-foreground">
-          © 2026 CTPR
+          © 2026 The HCI Review
         </div>
       </Container>
     </footer>

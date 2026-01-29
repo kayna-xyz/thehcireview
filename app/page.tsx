@@ -33,7 +33,7 @@ export default function Home() {
                   <div className="relative z-10 p-4 transition-transform duration-700 ease-out group-hover:scale-[1.02] group-hover:-translate-y-1">
                     <img 
                       src="/images/magazine-cover.png"
-                      alt="Columbia Tech & Policy Review - Fall 2026 Inaugural Issue"
+                      alt="The HCI Review - Fall 2026 Inaugural Issue"
                       className="w-full max-w-[340px] drop-shadow-[0_20px_40px_rgba(128,128,128,0.5)]"
                     />
                   </div>
@@ -46,7 +46,7 @@ export default function Home() {
                   Fall 2026 Inaugural Issue
                 </p>
                 <h1 className="font-mono text-4xl md:text-5xl font-bold tracking-tight text-foreground mb-6 text-balance">
-                  Columbia Tech & Policy Review
+                  The HCI Review
                 </h1>
                 <p className="text-lg text-muted-foreground leading-relaxed mb-4">
                   A biannual independent review journal focused on technological development and global governance.
@@ -69,13 +69,13 @@ export default function Home() {
         <section className="py-24 px-6 md:px-12 lg:px-24 bg-secondary/30">
           <div className="max-w-4xl mx-auto">
             <h2 className="font-mono text-sm uppercase tracking-[0.2em] text-muted-foreground mb-6">
-              About CTPR
+              About The HCI Review
             </h2>
             <h3 className="font-mono text-3xl md:text-4xl font-semibold text-foreground mb-8 text-balance">
-              What&apos;s CTPR?
+              What&apos;s The HCI Review?
             </h3>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              CTPR is a biannual independent review journal focused on technological development and global governance. Rooted in Columbia University&apos;s global perspective, we conduct in-depth semester-long analyses of AI evolution and the tensions between technological progress and global policy. CTPR is committed to providing readers with the underlying logic that transcends the surface of news coverage.
+              The HCI Review is a biannual independent review journal focused on human-computer interaction and technological development. Rooted in Columbia University&apos;s global perspective, we conduct in-depth semester-long analyses of HCI evolution and the intersection of human experience with emerging technology. The HCI Review is committed to providing readers with the underlying logic that transcends the surface of news coverage.
             </p>
           </div>
         </section>
@@ -185,7 +185,7 @@ export default function Home() {
 
             <img 
               src="/images/magazine-cover.png"
-              alt="Columbia Tech & Policy Review - Fall 2026 Inaugural Issue"
+              alt="The HCI Review - Fall 2026 Inaugural Issue"
               className="w-full max-w-[320px] drop-shadow-[0_20px_40px_rgba(128,128,128,0.5)] mb-8"
             />
 
