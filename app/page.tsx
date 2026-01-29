@@ -75,7 +75,7 @@ export default function Home() {
               What&apos;s The HCI Review?
             </h3>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              The HCI Review is a biannual independent review journal focused on human-computer interaction and emerging technology. Rooted in Columbia University&apos;s global perspective, we conduct in-depth semester-long analyses of HCI evolution and product analysis. The HCI Review is committed to providing readers with the outlier mode of thinking that allows us navigate in the post-AI era.
+              The HCI Review is a biannual independent review journal focused on human-computer interaction and emerging technology. Rooted in Columbia University&apos;s global perspective, we conduct in-depth analyses of HCI evolution and product analysis. The HCI Review is committed to providing readers with an outlier mode of thinking that allows us to navigate the post-AI era.
             </p>
           </div>
         </section>

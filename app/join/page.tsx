@@ -20,7 +20,7 @@ export default function JoinUs() {
               Join Us
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Be part of Columbia&apos;s premier student-run publication on technology and policy. We&apos;re looking for passionate individuals who want to shape the conversation around technological development and global governance.
+              Be part of Columbia&apos;s first student-led publication on human-computer interaction. We&apos;re looking for passionate individuals who want to shape the conversation around HCI, emerging technology, and product innovation.
             </p>
           </div>
         </section>
@@ -41,9 +41,9 @@ export default function JoinUs() {
               </div>
               
               <div className="bg-background p-6 border border-brand-button">
-                <h3 className="font-mono text-xl font-semibold text-foreground mb-2">Policy Analyst</h3>
+                <h3 className="font-mono text-xl font-semibold text-foreground mb-2">HCI Researcher</h3>
                 <p className="text-muted-foreground">
-                  Conduct in-depth research on technology policy, geopolitics, and global governance issues.
+                  Conduct in-depth research on human-computer interaction, emerging technologies, and product analysis.
                 </p>
               </div>
 
@@ -68,7 +68,7 @@ export default function JoinUs() {
         <section className="pb-24 px-6 md:px-12 lg:px-24 bg-secondary/30">
           <div className="max-w-4xl mx-auto">
             <p className="text-muted-foreground mt-8">
-              Interested in joining CTPR? Please send us a message at{" "}
+              Interested in joining The HCI Review? Please send us a message at{" "}
               <a
                 href="mailto:kh3443@columbia.edu"
                 className="text-brand-button hover:underline"
