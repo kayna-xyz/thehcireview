@@ -20,7 +20,7 @@ export default function JoinUs() {
               Join Us
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Be part of Columbia&apos;s first student-led publication on human-computer interaction. We&apos;re looking for passionate individuals who want to shape the conversation around HCI, emerging technology, and product innovation.
+              We&apos;re looking for passionate individuals who want to shape the conversation around HCI, emerging technology, and product innovation.
             </p>
           </div>
         </section>
