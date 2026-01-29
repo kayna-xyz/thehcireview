@@ -46,7 +46,7 @@ function HeaderContent() {
         <div>
           <Link href="/">
             <h1 className="font-mono text-5xl md:text-6xl font-semibold leading-tight tracking-tight">
-              <span className="inline-block">
+              <span className="inline-block whitespace-nowrap">
                 {"The HCI".split("").map((char, index) => (
                   <span
                     key={index}
