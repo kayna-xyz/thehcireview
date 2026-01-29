@@ -35,15 +35,23 @@ export default function JoinUs() {
             <div className="space-y-6">
               <div className="bg-background p-6 border border-brand-button">
                 <h3 className="font-mono text-xl font-semibold text-foreground mb-2">Editor</h3>
+                <p className="text-sm text-brand-button mb-2">For US local students</p>
                 <p className="text-muted-foreground">
-                  Review and edit submissions, ensure editorial quality, and help shape our publication standards.
+                  Review and edit submissions, ensure editorial quality, and help shape our publication standards. No AI or HCI experience needed.
                 </p>
               </div>
               
               <div className="bg-background p-6 border border-brand-button">
-                <h3 className="font-mono text-xl font-semibold text-foreground mb-2">HCI Researcher</h3>
+                <h3 className="font-mono text-xl font-semibold text-foreground mb-2">HCI Researcher (Industry)</h3>
                 <p className="text-muted-foreground">
-                  Conduct in-depth research on human-computer interaction, emerging technologies, and product analysis.
+                  Analyze the HCI industry, emerging tech products, market trends, and product innovations.
+                </p>
+              </div>
+
+              <div className="bg-background p-6 border border-brand-button">
+                <h3 className="font-mono text-xl font-semibold text-foreground mb-2">HCI Researcher (Research)</h3>
+                <p className="text-muted-foreground">
+                  Conduct quantitative and qualitative user research. Experience with user research methodologies preferred.
                 </p>
               </div>
 
