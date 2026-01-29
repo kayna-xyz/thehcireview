@@ -1,7 +1,6 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { X } from "lucide-react"
 
 export default function Banner() {
   const [open, setOpen] = useState(false)
@@ -31,16 +30,6 @@ export default function Banner() {
           </a>
         </div>
       </div>
-
-      {/* Close button */}
-      <button
-        type="button"
-        aria-label="Close banner"
-        onClick={() => setOpen(false)}
-        className="absolute right-6 top-1/2 -translate-y-1/2 p-2 text-white/90 hover:text-white"
-      >
-        <X className="w-6 h-6" strokeWidth={2.2} />
-      </button>
     </div>
   )
 }
