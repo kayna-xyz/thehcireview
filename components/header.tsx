@@ -45,7 +45,7 @@ function HeaderContent() {
       <div className="flex items-start justify-between py-6">
         <div>
           <Link href="/">
-            <h1 className="font-mono text-4xl font-semibold leading-tight tracking-tight">
+            <h1 className="font-mono text-5xl md:text-6xl font-semibold leading-tight tracking-tight">
               The HCI <br /> Review
             </h1>
           </Link>
