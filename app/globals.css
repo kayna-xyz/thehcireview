@@ -128,12 +128,12 @@
   }
 }
 
-@keyframes slideUp {
-  0% {
+@keyframes slideUpCycle {
+  0%, 100% {
     opacity: 0;
     transform: translateY(100%);
   }
-  100% {
+  10%, 90% {
     opacity: 1;
     transform: translateY(0);
   }

@@ -50,9 +50,9 @@ function HeaderContent() {
                 {"The HCI".split("").map((char, index) => (
                   <span
                     key={index}
-                    className="inline-block animate-[slideUp_0.5s_ease-out_forwards] opacity-0"
+                    className="inline-block animate-[slideUpCycle_4s_ease-in-out_infinite]"
                     style={{ 
-                      animationDelay: `${index * 0.05}s`,
+                      animationDelay: `${index * 0.08}s`,
                     }}
                   >
                     {char === " " ? "\u00A0" : char}
@@ -64,9 +64,9 @@ function HeaderContent() {
                 {"Review".split("").map((char, index) => (
                   <span
                     key={index}
-                    className="inline-block animate-[slideUp_0.5s_ease-out_forwards] opacity-0"
+                    className="inline-block animate-[slideUpCycle_4s_ease-in-out_infinite]"
                     style={{ 
-                      animationDelay: `${(index + 8) * 0.05}s`,
+                      animationDelay: `${(index + 8) * 0.08}s`,
                     }}
                   >
                     {char}
