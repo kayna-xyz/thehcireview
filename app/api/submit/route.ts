@@ -65,7 +65,7 @@ export async function POST(request: Request) {
 
     const result = await resend.emails.send({
       from: "HCI Review <onboarding@resend.dev>",
-      to: "kh3443@columbia.edu",
+      to: "kh3443@barnard.edu",
       replyTo: email,
       subject: `HCI Review Submission - ${name}`,
       html: htmlContent,
