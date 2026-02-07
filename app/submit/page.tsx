@@ -3,11 +3,14 @@
 import React, { useState, useRef } from "react"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
-import { Upload, Clock, Users, FileText, CheckCircle, X } from "lucide-react"
+import { Upload, Clock, Users, FileText, CheckCircle, X, Loader2 } from "lucide-react"
 
 export default function SubmitPage() {
   const [dragActive, setDragActive] = useState(false)
   const [uploadedFile, setUploadedFile] = useState<File | null>(null)
+  const [submitting, setSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle")
+  const [errorMessage, setErrorMessage] = useState("")
   const [formData, setFormData] = useState({
     name: "",
     affiliation: "",
@@ -54,12 +57,49 @@ export default function SubmitPage() {
     setFormData(prev => ({ ...prev, [name]: value }))
   }
 
-  const handleSubmit = () => {
-    const subject = encodeURIComponent("HCI Review Submission - " + formData.name)
-    const body = encodeURIComponent(
-      `Name: ${formData.name}\nAffiliation: ${formData.affiliation}\nGraduate Year: ${formData.graduateYear}\nEmail: ${formData.email}\n\nArticle Description:\n${formData.articleDescription}`
-    )
-    window.location.href = `mailto:kh3443@columbia.edu?subject=${subject}&body=${body}`
+  const handleSubmit = async () => {
+    if (!formData.name || !formData.email || !formData.affiliation || !formData.articleDescription) {
+      setSubmitStatus("error")
+      setErrorMessage("Please fill in all required fields.")
+      return
+    }
+
+    setSubmitting(true)
+    setSubmitStatus("idle")
+    setErrorMessage("")
+
+    try {
+      const data = new FormData()
+      data.append("name", formData.name)
+      data.append("email", formData.email)
+      data.append("affiliation", formData.affiliation)
+      data.append("graduateYear", formData.graduateYear)
+      data.append("articleDescription", formData.articleDescription)
+      if (uploadedFile) {
+        data.append("file", uploadedFile)
+      }
+
+      const res = await fetch("/api/submit", {
+        method: "POST",
+        body: data,
+      })
+
+      const result = await res.json()
+
+      if (!res.ok) {
+        throw new Error(result.error || "Something went wrong.")
+      }
+
+      setSubmitStatus("success")
+      setFormData({ name: "", affiliation: "", graduateYear: "", email: "", articleDescription: "" })
+      setUploadedFile(null)
+      if (fileInputRef.current) fileInputRef.current.value = ""
+    } catch (err) {
+      setSubmitStatus("error")
+      setErrorMessage(err instanceof Error ? err.message : "Failed to send submission. Please try again.")
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   const topics = [
@@ -277,7 +317,7 @@ export default function SubmitPage() {
                   ref={fileInputRef}
                   type="file"
                   onChange={handleFileChange}
-                  accept=".pdf,.doc,.docx,.txt,.md"
+                  accept="*/*"
                   className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
                 />
                 
@@ -302,7 +342,7 @@ export default function SubmitPage() {
                       <span className="text-foreground font-medium">Click to upload</span> or drag and drop
                     </p>
                     <p className="text-sm text-muted-foreground mt-2">
-                      PDF, DOC, DOCX, TXT, or MD
+                      Any file type accepted
                     </p>
                   </>
                 )}
@@ -312,10 +352,36 @@ export default function SubmitPage() {
             {/* Submit Button */}
             <button
               onClick={handleSubmit}
-              className="px-8 py-4 border border-brand-button bg-background text-foreground font-mono font-medium hover:bg-brand-button/5 transition-colors"
+              disabled={submitting}
+              className="px-8 py-4 border border-brand-button bg-background text-foreground font-mono font-medium hover:bg-brand-button/5 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-3"
             >
-              Submit
+              {submitting ? (
+                <>
+                  <Loader2 className="w-4 h-4 animate-spin" />
+                  Submitting...
+                </>
+              ) : (
+                "Submit"
+              )}
             </button>
+
+            {submitStatus === "success" && (
+              <div className="mt-4 p-4 border border-brand-button bg-brand-button/5 flex items-center gap-3">
+                <CheckCircle className="w-5 h-5 text-brand-button flex-shrink-0" />
+                <p className="text-foreground font-mono text-sm">
+                  Your submission has been sent successfully! We will review it and get back to you.
+                </p>
+              </div>
+            )}
+
+            {submitStatus === "error" && (
+              <div className="mt-4 p-4 border border-red-400 bg-red-50 dark:bg-red-950/20">
+                <p className="text-red-600 dark:text-red-400 font-mono text-sm">
+                  {errorMessage}
+                </p>
+              </div>
+            )}
+
             <p className="mt-4 text-muted-foreground">
               or send your pitch to{" "}
               <a
