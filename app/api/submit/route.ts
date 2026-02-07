@@ -63,7 +63,7 @@ export async function POST(request: Request) {
       })
     }
 
-    await resend.emails.send({
+    const result = await resend.emails.send({
       from: "HCI Review <onboarding@resend.dev>",
       to: "kh3443@columbia.edu",
       replyTo: email,
@@ -72,9 +72,19 @@ export async function POST(request: Request) {
       attachments,
     })
 
+    console.log("[v0] Resend response:", JSON.stringify(result))
+
+    if (result.error) {
+      console.error("[v0] Resend error:", result.error)
+      return NextResponse.json(
+        { error: result.error.message || "Failed to send email." },
+        { status: 500 }
+      )
+    }
+
     return NextResponse.json({ success: true })
   } catch (error) {
-    console.error("Email send error:", error)
+    console.error("[v0] Email send error:", error)
     return NextResponse.json(
       { error: "Failed to send submission. Please try again." },
       { status: 500 }
