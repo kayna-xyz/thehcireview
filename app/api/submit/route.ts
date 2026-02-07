@@ -22,6 +22,10 @@ export async function POST(request: Request) {
       )
     }
 
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    const isValidEmail = emailRegex.test(email.trim())
+
     // Build email HTML
     const htmlContent = `
       <div style="font-family: monospace; max-width: 600px; margin: 0 auto;">
@@ -66,16 +70,13 @@ export async function POST(request: Request) {
     const result = await resend.emails.send({
       from: "HCI Review <onboarding@resend.dev>",
       to: "kh3443@barnard.edu",
-      replyTo: email,
+      ...(isValidEmail ? { replyTo: email.trim() } : {}),
       subject: `HCI Review Submission - ${name}`,
       html: htmlContent,
       attachments,
     })
 
-    console.log("[v0] Resend response:", JSON.stringify(result))
-
     if (result.error) {
-      console.error("[v0] Resend error:", result.error)
       return NextResponse.json(
         { error: result.error.message || "Failed to send email." },
         { status: 500 }
@@ -84,7 +85,7 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ success: true })
   } catch (error) {
-    console.error("[v0] Email send error:", error)
+    console.error("Email send error:", error)
     return NextResponse.json(
       { error: "Failed to send submission. Please try again." },
       { status: 500 }
